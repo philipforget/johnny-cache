@@ -3,9 +3,10 @@
 
 """Middleware classes for johnny cache."""
 
-from django.middleware import transaction as trans_middleware
 from django.db import transaction
-from johnny import cache, settings
+from django.middleware import transaction as trans_middleware
+from johnny import cache
+from johnny import johnny_settings as settings
 
 
 class QueryCacheMiddleware(object):

@@ -11,7 +11,7 @@ except ImportError:
 
 import localstore
 import signals
-from johnny import settings
+from johnny import johnny_settings as settings
 from johnny.decorators import wraps, available_attrs
 from transaction import TransactionManager
 

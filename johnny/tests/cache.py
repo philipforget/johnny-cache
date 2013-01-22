@@ -11,7 +11,7 @@ try:
 except:
     connections = None
 from johnny import middleware
-from johnny import settings as johnny_settings
+from johnny import johnny_settings
 import base
 
 try:
@@ -59,7 +59,8 @@ class BlackListTest(QueryCacheBase):
     fixtures = base.johnny_fixtures
 
     def test_basic_blacklist(self):
-        from johnny import cache, settings
+        from johnny import cache
+        from johnny import johnny_settings as settings
         from testapp.models import Genre, Book
         q = base.message_queue()
         old = johnny_settings.BLACKLIST

@@ -23,7 +23,7 @@ class TransactionManager(object):
     _patched_var = False
 
     def __init__(self, cache_backend, keygen):
-        from johnny import cache, settings
+        from johnny import johnny_settings as settings
 
         self.timeout = settings.MIDDLEWARE_SECONDS
         self.prefix = settings.MIDDLEWARE_KEY_PREFIX
